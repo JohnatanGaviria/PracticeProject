@@ -3,30 +3,37 @@ public class index {
 
 	public static void main(String[] args) {
 		
-		String greetings = "hello";
-		String convoStarter = "how are you?";
-//		String fancyWord = "pneumonoultramicroscopicsilicovolcanoconiosis";
+		String greetings = "Hello";
+		String convoStarter = "How are you?";
+		
+		Student myStudent = new Student();
+		myStudent.name = "Alex";
+		myStudent.age = 18;
+		myStudent.hobby = "Painting";
+		
+		String [] convoStarters = {"hows it going?", "nice weather we're having", "seen the news lately?"}; 
+		
+		for(int i = 0; i < convoStarters.length; i++ ) {
+			System.out.println(convoStarters[i]);
+
+		}
+		
 
 		
-//		int ageYears = 5;
-//		float ageMonths = 8.5f;
+
 		
 		System.out.println(greetings);
 		System.out.println(convoStarter);
-		smartyPants("pneumonoultramicroscopicsilicovolcanoconiosis");
-		smartyPants("mississippi");
-//		System.out.println(greetings.length());
-//		System.out.println(fancyWord.length());
+		importedMethods.smartyPants("pneumonoultramicroscopicsilicovolcanoconiosis");
+		importedMethods.smartyPants("mississippi");
+		importedMethods.finisher("pre-school", 12);
+
+		importedMethods.introduction(myStudent.name);
+		importedMethods.howOld(myStudent.age);
+		importedMethods.passtime(myStudent.hobby);
 		
-//		for (int i= 0; i < 5; i++) {
-//			System.out.println(i);
-//		}
+		
 	}
-	private static void smartyPants(String fancyWord) {
-//		String fancyWord = "pneumonoultramicroscopicsilicovolcanoconiosis";
-		System.out.println("theres a word that reads");
-		System.out.println(fancyWord);
-		System.out.println("it is " + fancyWord.length() + " letters long");
-	}
+
 
 }
